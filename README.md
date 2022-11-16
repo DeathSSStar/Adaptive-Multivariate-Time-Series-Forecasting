@@ -42,7 +42,7 @@ The final steps are:
 ## Bidirectional LSTM
 The model is a Bidirectional LSTM with the following structure:
 
-<img src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/BD%20LSTM%20schema.png" height="2000">
+<img src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/BD%20LSTM%20schema.png" heigth="2000">
 
 ## Output
 
