@@ -36,17 +36,17 @@ The final steps are:
 - split X, y and exog_pca in 95% train and 5% test
 - Reshape X and y with shape [Dim0, Dim1, 1]
 
-<img src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/Preprocessing%20tesi3.png" width="600">
+<img src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/Preprocessing%20tesi3.png" width="1000">
 
 ---
 ## Bidirectional LSTM
 The model is a Bidirectional LSTM with the following structure:
 
-![alt text](https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/BD%20LSTM%20schema.png | height=1000)
+<img src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/BD%20LSTM%20schema.png" height="2000">
 
 ## Output
 
 The outputs of the model are the MSE on the test set for the best model and the forecast.
 Moreover it shows a plot with the validation curves, e.g.
 
-![alt text](https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/LSTM_Gold_val_curve.png | width=500)
+<img src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/LSTM_Gold_val_curve.png" width="1000">
