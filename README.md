@@ -49,4 +49,4 @@ The model is a Bidirectional LSTM with the following structure:
 The outputs of the model are the MSE on the test set for the best model and the forecast.
 Moreover it shows a plot with the validation curves, e.g.
 
-<img src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/LSTM_Gold_val_curve.png" width="1000">
+<img{background-color:white} src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/LSTM_Gold_val_curve.png" width="1000">
