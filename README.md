@@ -19,19 +19,16 @@ The preprocessing is made with the following steps:
 - Check datetime correct format
 - Extract time info
 
----
 For the target variable are executed the following steps:
 - Rescale in range [0,1]
 - Creation of the X array with *window_size* shifts in the past for training
 - Creation of the y array with *prevision_length* future time shifts
 
----
 For the exogenous variable are executed the following steps:
 - Rescale in range [0,1]
 - Creation of the *window_size* past time shifts
 - Principal Component Analysis with automated choiche of N_components (exog_pca)
 
----
 The final steps are:
 - split X, y and exog_pca in 95% train and 5% test
 - Reshape X and y with shape [Dim0, Dim1, 1]
@@ -44,6 +41,7 @@ The model is a Bidirectional LSTM with the following structure:
 
 <img src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/BD%20LSTM%20schema.png" width="400">
 
+---
 ## Output
 
 The outputs of the model are the MSE on the test set for the best model and the forecast.
