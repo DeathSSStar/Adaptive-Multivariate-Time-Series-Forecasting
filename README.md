@@ -36,17 +36,17 @@ The final steps are:
 - split X, y and exog_pca in 95% train and 5% test
 - Reshape X and y with shape [Dim0, Dim1, 1]
 
-![alt text]()
+![alt text](Preprocessing test3.png)
 
 ---
 ## Bidirectional LSTM
 The model is a Bidirectional LSTM with the following structure:
 
-![alt text]()
+![alt text](BD LSTM Schema.png)
 
 ## Output
 
 The outputs of the model are the MSE on the test set for the best model and the forecast.
 Moreover it shows a plot with the validation curves, e.g.
 
-![alt text]()
+![alt text](LSTM_Gold_val_curve.png)
