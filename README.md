@@ -36,7 +36,7 @@ The final steps are:
 - split X, y and exog_pca in 95% train and 5% test
 - Reshape X and y with shape [Dim0, Dim1, 1]
 
-![alt text](https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/Preprocessing%20tesi3.png | width=500)
+<img src="https://github.com/DeathSSStar/Adaptive-Multivariate-Time-Series-Forecasting/blob/master/Preprocessing%20tesi3.png" width="600">
 
 ---
 ## Bidirectional LSTM
