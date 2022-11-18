@@ -176,24 +176,32 @@ def preprocessing(df_,window_size,col_no,target_variable,prevision_frequency,pre
     pca = PCA(exog.shape[1])
     pca = pca.fit(exog)
     variance = pca.explained_variance_ratio_
-    variance_treshold = 0.8
-    app = 0
-    for i,x in enumerate(variance):
-        app+=x
-        if app > variance_treshold:
+    variance_threshold = 0.8
+    check = False
+    max_comp = 5
+    if max_comp > exog.shape[1]:
+        max_comp = exog.shape[1]
+
+    while True:
+        app = 0
+        for i in range(max_comp):
+            app += variance[i]
+            if app > variance_threshold:
+                index=i+1
+                check = True
+                break
+
+        if check == True:
             break
 
-        # Questi if servono per creare una sorta di equilibrio
-        # tra numero di features e varianza spiegata
-        elif variance_treshold == 0.5:
+        elif variance_threshold < 0.61:
+            index=max_comp
             break
 
-        elif i > 10:
-            break
         else:
-            variance_treshold -= 0.1
+            variance_threshold -= 0.1
 
-    exog_pca = pca.transform(exog)[:,:i]
+    exog_pca = pca.transform(exog)[:,:index]
     
     df_target_variable_ = create_step(df_target_variable,window_size)        
     df1 = pd.concat([df_target_variable,df_target_variable_],axis=1)
